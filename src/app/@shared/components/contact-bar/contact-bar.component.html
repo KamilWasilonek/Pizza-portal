@@ -1,0 +1,22 @@
+<section class="contact-bar">
+  <ul class="contact-bar__items">
+    <app-contact-bar-item
+      *ngFor="let item of contactItems"
+      [contactItem]="item"
+    >
+    </app-contact-bar-item>
+  </ul>
+  <div class="contact-bar__socials-container">
+    <ul class="contact-bar__socials">
+      <li class="contact-bar__social-item">
+        <span class="contact-bar__twitter-icon"></span>
+      </li>
+      <li class="contact-bar__social-item">
+        <span class="contact-bar__facebook-icon"></span>
+      </li>
+      <li class="contact-bar__social-item">
+        <span class="contact-bar__instagram-icon"></span>
+      </li>
+    </ul>
+  </div>
+</section>

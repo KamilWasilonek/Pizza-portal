@@ -1,0 +1,17 @@
+$titleFontSize: 1.6rem;
+$descFontSize: 1.4rem;
+$descColor: #808080;
+
+.contact-bar-item {
+  font-size: $titleFontSize;
+  line-height: 3rem;
+
+  &__title {
+    font-family: Josefin-semibold;
+  }
+
+  &__desc {
+    color: $descColor;
+    font-size: $descFontSize;
+  }
+}
