@@ -1,24 +1,39 @@
 @import 'variables.scss';
-$navFontSize: 1.4rem;
-
+@import 'mixins.scss';
+$navListFontSize: 1.4rem;
+$mobileBtnFontSize: 1.7rem;
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $darkGrey;
+  background: $black;
   color: $white;
-  font-size: $navFontSize;
+  font-size: $navListFontSize;
+
+  @include lg {
+    display: block;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &__logo {
     cursor: pointer;
+
+    @include lg {
+      padding: 1.5rem;
+    }
   }
 
   &__logo-link {
     color: $white;
-    font-family: Josefin-regular;
+    font-family: Josefin-semiBold;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   &__logo-link::before {
@@ -30,30 +45,70 @@ $navFontSize: 1.4rem;
     background: url(../../../../assets/icons/pizza.png);
     background-size: cover;
     vertical-align: top;
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   &__logo-span {
     display: block;
     margin-top: 0.3rem;
     color: $orange;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
   }
 
   &__menu {
     display: flex;
+    height: auto;
     list-style: none;
+    transition: height 2s ease;
+
+    @include lg {
+      display: none;
+      text-align: center;
+
+      &--active {
+        display: block;
+      }
+    }
   }
 
   &__menu-item {
     padding: 2.5rem 2rem;
     cursor: pointer;
+
+    @include lg {
+      padding: 2rem 0;
+    }
   }
 
   &__menu-link {
     text-decoration: none;
     color: $white;
+  }
+
+  //  ----- Mobile
+
+  &__mobile-btn {
+    display: none;
+    background: none;
+    color: $lightGrey;
+    border: none;
+    font-size: $mobileBtnFontSize;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include lg {
+      display: block;
+    }
+  }
+
+  &__mobile-btn:focus {
+    outline-color: $orange;
+  }
+
+  &__mobile-btn::before {
+    content: '\f0c9';
+    font-family: FontAwesome;
   }
 }

@@ -1,10 +1,18 @@
 <section class="container nav">
-  <div class="nav__logo">
-    <a class="nav__logo-link" href="#"
-      >Pizza<span class="nav__logo-span">Delicous</span>
-    </a>
+  <div class="nav__container">
+    <div class="nav__logo">
+      <a class="nav__logo-link" href="#"
+        >Pizza<span class="nav__logo-span">Delicous</span>
+      </a>
+    </div>
+    <button class="nav__mobile-btn" (click)="toggleMenu()">
+      Menu
+    </button>
   </div>
-  <ul class="nav__menu">
+  <ul
+    class="nav__menu"
+    [ngClass]="{'nav__menu--active' : isMobileMenuOpen }"
+  >
     <li class="nav__menu-item">
       <a class="nav__menu-link" href="#">Home</a>
     </li>

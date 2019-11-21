@@ -1,24 +1,50 @@
 @import 'variables.scss';
+$titleFontSize: 3rem;
+$descFontSize: 1.6rem;
 
 .intro {
+  display: flex;
   background: $darkGrey;
 
   &__img-container {
-    background-image: url('../../../../assets/images/about.jpg');
+    flex-basis: 50%;
+    background-image: url(../../../../assets/images/about.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
-  
-  &__details {
 
+  &__details {
+    flex-basis: 50%;
+    padding: 6rem;
   }
 
   &__title {
-    color: white;
+    margin-bottom: 2rem;
+    color: $white;
+    font-size: $titleFontSize;
+    font-family: Josefin-regular;
+    line-height: 4rem;
+  }
+
+  &__title-icon {
+    color: $orange;
   }
 
   &__title-icon::before {
     content: '';
+    display: inline-block;
+    margin-left: 1rem;
+    width: 1.5em;
+    height: 1.5em;
+    background: url(../../../../assets/icons/pizza-rounded.png);
+    background-size: cover;
+    font-size: 1.8rem;
+  }
+
+  &__desc {
+    color: $grey;
+    font-size: $descFontSize;
+    line-height: 3rem;
   }
 }
