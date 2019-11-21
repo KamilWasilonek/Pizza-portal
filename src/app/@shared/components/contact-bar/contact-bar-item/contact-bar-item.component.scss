@@ -1,6 +1,7 @@
+@import 'variables.scss';
+
 $titleFontSize: 1.6rem;
 $descFontSize: 1.4rem;
-$descColor: #808080;
 
 .contact-bar-item {
   font-size: $titleFontSize;
@@ -11,7 +12,7 @@ $descColor: #808080;
   }
 
   &__desc {
-    color: $descColor;
+    color: $grey;
     font-size: $descFontSize;
   }
 }

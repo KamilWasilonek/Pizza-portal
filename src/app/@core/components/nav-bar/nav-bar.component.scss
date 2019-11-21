@@ -1,14 +1,13 @@
-$navBgColor: #121618;
-$navFontColor: #ffffff;
+@import 'variables.scss';
 $navFontSize: 1.4rem;
-$navIconColor: #fac564;
+
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: $navBgColor;
-  color: $navFontColor;
+  background: $darkGrey;
+  color: $white;
   font-size: $navFontSize;
 
   &__logo {
@@ -16,7 +15,7 @@ $navIconColor: #fac564;
   }
 
   &__logo-link {
-    color: $navFontColor;
+    color: $white;
     font-family: Josefin-regular;
     text-decoration: none;
     font-size: 3rem;
@@ -37,7 +36,7 @@ $navIconColor: #fac564;
   &__logo-span {
     display: block;
     margin-top: 0.3rem;
-    color: $navIconColor;
+    color: $orange;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
@@ -55,6 +54,6 @@ $navIconColor: #fac564;
 
   &__menu-link {
     text-decoration: none;
-    color: $navFontColor;
+    color: $white;
   }
 }

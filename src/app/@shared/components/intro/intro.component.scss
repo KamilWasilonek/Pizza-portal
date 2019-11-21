@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+.intro {
+  background: $darkGrey;
+
+  &__img-container {
+    background-image: url('../../../../assets/images/about.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  &__details {
+
+  }
+
+  &__title {
+    color: white;
+  }
+
+  &__title-icon::before {
+    content: '';
+  }
+}

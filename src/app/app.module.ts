@@ -7,15 +7,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './@core/components/nav-bar/nav-bar.component';
-import { ContactBarComponent } from './@shared/components/contact-bar/contact-bar.component';
-import { ContactBarItemComponent } from './@shared/components/contact-bar/contact-bar-item/contact-bar-item.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    ContactBarComponent,
-    ContactBarItemComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,
