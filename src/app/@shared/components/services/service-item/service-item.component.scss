@@ -1,0 +1,25 @@
+@import 'variables.scss';
+
+.service {
+  max-width: 25rem;
+
+  &__icon-container {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto 5rem auto;
+    border: 1px solid #bf7e06;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &:hover {
+    .service__icon-container {
+      background: #f8b500;
+      border: none;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__title {
+    margin: 0 0 4rem 0;
+  }
+}

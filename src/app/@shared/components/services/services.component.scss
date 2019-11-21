@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins.scss';
+
+.services {
+  background-image: url(../../../../assets/images/food.png);
+  background-position: center center;
+  text-align: center;
+
+  &__container {
+    padding: 10rem 0;
+  }
+
+  &__title {
+    font-size: $sectionTitleFontSize;
+  }
+
+  &__desc {
+    margin: 0 auto;
+    max-width: 45rem;
+    font-size: $sectionDescFontSize;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+}

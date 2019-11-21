@@ -1,0 +1,6 @@
+@import 'mixins.scss';
+
+.banner {
+  @include bg-image;
+  min-height: 40rem;
+}

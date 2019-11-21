@@ -2,14 +2,19 @@
 
 .contact-bar {
   display: flex;
+  align-items: center;
   color: $white;
 
   &__items {
     flex-basis: 70%;
     display: flex;
-    justify-content: space-between;
-    padding: 3rem;
+    justify-content: center;
+    padding: 5rem 0;
     background: $black;
+  }
+
+  &__item:nth-child(even){
+    
   }
 
   &__socials-container {
@@ -21,10 +26,6 @@
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 3rem;
-  }
-
-  &__social-item {
   }
 
   &__twitter-icon,

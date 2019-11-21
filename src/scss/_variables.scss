@@ -4,3 +4,6 @@ $darkGrey: #201e21;
 $grey: #808080;
 $lightGrey: #bfbfbf;
 $orange: #fac564;
+
+$sectionTitleFontSize: calc(28px + (32 - 28) * ((100vw - 320px) / (1550 - 320))); //base font-size 52px
+$sectionDescFontSize: 1.6rem;
