@@ -1,0 +1,11 @@
+<div class="menu-item" [ngClass]="{'menu-item--reversed': reversed}">
+  <div class="menu-item__image" [ngStyle]="{ 'background-image': 'url(' + item.imgSrc + ')'}"></div>
+  <div class="menu-item__details">
+    <h4 class="menu-item__title">{{item.title}}</h4>
+    <p class="menu-item__desc">{{item.desc}}</p>
+    <div class="menu-item__order">
+      <span class="menu-item__price">{{item.price | currency}}</span>
+      <button class="menu-item__order-btn">Order</button>
+    </div>
+  </div>
+</div>

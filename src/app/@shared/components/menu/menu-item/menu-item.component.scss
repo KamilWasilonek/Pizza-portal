@@ -1,0 +1,57 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+$titleFontSize: 2rem;
+$descFontSize: 1.4rem;
+
+.menu-item {
+  display: flex;
+  background: $black;
+  color: white;
+  text-align:  left;
+
+  &--reversed {
+    flex-direction: row-reverse;
+  }
+
+  &__image {
+    @include bgImagePosition;
+    flex-basis: 50%;
+  }
+  
+  &__details {
+    flex-basis: 50%;
+    padding: 2.5rem;
+  }
+
+  &__title {
+    @include sectionTitle($color: $white, $fontSize: $titleFontSize);
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+  }
+
+  &__desc {
+    @include sectionDesc($color: $grey, $fontSize: $descFontSize);
+  }
+
+  &__price {
+    @include sectionDesc($color: $orange, $fontSize: $descFontSize);
+    margin-right: 1rem;
+  }
+
+  &__order {
+    margin: 2rem 0;
+  }
+
+  &__order-btn {
+    padding: 0.6rem 1.2rem;
+    background: none;
+    color: $white;
+    cursor: pointer;
+
+    &:focus {
+      color: $black;
+      background: $orange;
+    }
+  }
+}

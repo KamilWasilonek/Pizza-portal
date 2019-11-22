@@ -1,0 +1,14 @@
+<div class="menu">
+  <h2 class="menu__title">Hot Pizza Meals</h2>
+  <h4 class="menu__desc">
+    Far far away, behind the word mountains, far from the countries Vokalia and
+    Consonantia, there live the blind texts.
+  </h4>
+  <div class="menu__container">
+    <ul class="menu__list">
+      <li class="menu__list-item" *ngFor="let item of menuItems; index as i">
+        <app-menu-item class="menu__list-item" [item]="item"></app-menu-item>
+      </li>
+    </ul>
+  </div>
+</div>

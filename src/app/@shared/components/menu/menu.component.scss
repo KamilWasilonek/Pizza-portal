@@ -1,0 +1,33 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.menu {
+  padding: 10rem 0;
+  background: $darkGrey;
+  color: $white;
+  text-align: center;
+
+  &__title {
+    @include sectionTitle($color: $white);
+  }
+
+  &__desc {
+    @include sectionDesc($color: $grey);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+
+    @include lg {
+      display: block;
+    }
+  }
+
+  &__list-item {
+    @include lg {
+      margin-bottom: 3rem;
+    }
+  }
+}

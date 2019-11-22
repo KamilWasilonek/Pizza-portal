@@ -6,6 +6,8 @@ import { IntroComponent } from './components/intro/intro.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ServiceItemComponent } from './components/services/service-item/service-item.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ServiceItemComponent } from './components/services/service-item/service
     IntroComponent,
     BannerComponent,
     ServicesComponent,
-    ServiceItemComponent
+    ServiceItemComponent,
+    MenuComponent,
+    MenuItemComponent
   ],
   imports: [CommonModule],
   exports: [
@@ -22,7 +26,9 @@ import { ServiceItemComponent } from './components/services/service-item/service
     ContactBarItemComponent,
     IntroComponent,
     BannerComponent,
-    ServicesComponent
+    ServicesComponent,
+    MenuComponent,
+    MenuItemComponent
   ]
 })
 export class SharedModule {}

@@ -1,0 +1,60 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+$titleFontSize: 1.6rem;
+
+:host {
+  display: block;
+  background: $darkGrey;
+}
+
+.footer {
+  @include bootstrapContainer;
+  margin: 0 auto;
+  padding: 10rem 0;
+  background: $darkGrey;
+  color: $white;
+}
+
+.about {
+  &__title {
+    @include sectionTitle($color: $white, $fontSize: $titleFontSize);
+  }
+
+  &__desc {
+    @include sectionDesc($color: $lightGrey)
+  }
+
+  &__social-list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__social-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 60%;
+    font-size: 2.3rem;
+    font-family: FontAwesome;
+
+    &--twitter::before {
+      content: '\f099';
+    }
+
+    &--facebook::before {
+      content: '\f082';
+    }
+
+    &--instagram::before {
+      content: '\f16d';
+    }
+
+    &:nth-child(even) {
+      margin: 0 1.5rem;
+    }
+  }
+}
