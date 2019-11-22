@@ -1,3 +1,5 @@
+@import './variables';
+
 @mixin xxl {
   @media only screen and (max-width: 1500px) {
     @content;
@@ -27,8 +29,45 @@
   }
 }
 
-@mixin bg-image {
+@mixin bootstrapContainer {
+  max-width: 114rem;
+
+  @include xl {
+    max-width: 96rem;
+  }
+
+  @include lg {
+    max-width: 72rem;
+  }
+
+  @include md {
+    max-width: 54rem;
+  }
+}
+
+@mixin bgImagePosition {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+@mixin sectionTitle(
+  $color: '#000000',
+  $fontSize: $sectionTitleFontSize,
+  $fontFamily: $secondarySemiBoldFont
+) {
+  color: $color;
+  font-size: $fontSize;
+  font-family: $fontFamily;
+  text-transform: uppercase;
+}
+
+@mixin sectionDesc(
+  $color: '#000000',
+  $fontSize: $sectionDescFontSize,
+  $fontFamily: $primaryLightFont
+) {
+  color: $color;
+  font-size: $fontSize;
+  font-family: $fontFamily;
 }

@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class BannerComponent implements OnInit {
   imgSrc = "../../../../assets/images/bg_1.jpg";
 
-
   constructor() { }
 
   ngOnInit() {

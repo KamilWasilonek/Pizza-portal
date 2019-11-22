@@ -3,7 +3,19 @@
 .service {
   max-width: 25rem;
 
+  &:hover {
+    .service__icon-bg {
+      background: #f8b500;
+      border: none;
+      transform: rotate(135deg);
+    }
+  }
+
   &__icon-container {
+    position: relative;
+  }
+
+  &__icon-bg {
     width: 10rem;
     height: 10rem;
     margin: 0 auto 5rem auto;
@@ -11,13 +23,40 @@
     transition: transform 0.3s ease-in-out;
   }
 
-  &:hover {
-    .service__icon-container {
-      background: #f8b500;
-      border: none;
-      transform: rotate(135deg);
-    }
+  &__icon-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.5em;
+    height: 1.5em;
+    background: url(/assets/icons/diet.svg);
+    background-size: cover;
+    font-size: 5rem;
   }
+
+  // &__icon-container {
+  //   position: relative;
+  //   width: 10rem;
+  //   height: 10rem;
+  //   margin: 0 auto 5rem auto;
+  //   border: 1px solid #bf7e06;
+  //   transition: transform 0.3s ease-in-out;
+  // }
+
+  // &__icon-container:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   display: inline-block;
+  //   margin-left: 1rem;
+  //   width: 1.5em;
+  //   height: 1.5em;
+  //   background: url(../../../../../assets/icons/diet.png);
+  //   background-size: cover;
+  //   font-size: 5rem;
+  // }
 
   &__title {
     margin: 0 0 4rem 0;

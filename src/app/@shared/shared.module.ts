@@ -22,7 +22,7 @@ import { ServiceItemComponent } from './components/services/service-item/service
     ContactBarItemComponent,
     IntroComponent,
     BannerComponent,
-    ServicesComponent,
+    ServicesComponent
   ]
 })
 export class SharedModule {}

@@ -11,13 +11,15 @@
   }
 
   &__title {
-    font-size: $sectionTitleFontSize;
+    @include sectionTitle;
   }
 
   &__desc {
+    @include sectionDesc;
+    font-family: $primaryLightFont;
     margin: 0 auto;
     max-width: 45rem;
-    font-size: $sectionDescFontSize;
+    font-weight: 300;
   }
 
   &__list {

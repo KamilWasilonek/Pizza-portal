@@ -9,7 +9,7 @@ $descFontSize: 1.6rem;
   background: $darkGrey;
 
   &__img-container {
-    @include bg-image;
+    @include bgImagePosition;
     flex-basis: 50%;
     background-image: url(../../../../assets/images/about.jpg);
   }

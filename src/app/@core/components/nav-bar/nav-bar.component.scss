@@ -4,9 +4,6 @@ $navListFontSize: 1.4rem;
 $mobileBtnFontSize: 1.7rem;
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: $black;
   color: $white;
   font-size: $navListFontSize;
@@ -16,9 +13,25 @@ $mobileBtnFontSize: 1.7rem;
   }
 
   &__container {
+    @include bootstrapContainer;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0.8rem 1.5rem;
+    max-width: 114rem;
+
+    @include lg {
+      display: block;
+     
+    }
+  }
+
+  &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {

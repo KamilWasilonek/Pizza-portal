@@ -7,3 +7,13 @@ $orange: #fac564;
 
 $sectionTitleFontSize: calc(28px + (32 - 28) * ((100vw - 320px) / (1550 - 320))); //base font-size 52px
 $sectionDescFontSize: 1.6rem;
+
+// Fonts
+$primaryLightFont: Poppins-light;
+$primaryRegularFont: Poppins-light;
+$primaryBoldFont: Poppins-light;
+
+$secondaryLightFont: Josefin-light;
+$secondaryRegularFont: Josefin-regular;
+$secondarySemiBoldFont: Josefin-semiBold;
+$secondaryBoldFont: Josefin-bold;
