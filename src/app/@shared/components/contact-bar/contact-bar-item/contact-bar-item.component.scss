@@ -1,14 +1,26 @@
 @import 'variables.scss';
 
-$titleFontSize: 1.6rem;
+$titleFontSize: 1.3rem;
 $descFontSize: 1.4rem;
 
 .contact-bar-item {
+  display: flex;
   font-size: $titleFontSize;
   line-height: 3rem;
 
+  :nth-child(even) {
+    padding: 0 2rem;
+  }
+
+  &__icon::before {
+    content: '\f095';
+    width: 20px;
+    padding-right: 1rem;
+    font-family: FontAwesome;
+  }
+
   &__title {
-    font-family: Josefin-semibold;
+    font-family: $secondarySemiBoldFont;
   }
 
   &__desc {

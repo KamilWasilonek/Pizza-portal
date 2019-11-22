@@ -3,6 +3,13 @@
 $navListFontSize: 1.4rem;
 $mobileBtnFontSize: 1.7rem;
 
+:host {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
 .nav {
   background: $black;
   color: $white;
@@ -23,7 +30,6 @@ $mobileBtnFontSize: 1.7rem;
 
     @include lg {
       display: block;
-     
     }
   }
 
@@ -44,7 +50,7 @@ $mobileBtnFontSize: 1.7rem;
 
   &__logo-link {
     color: $white;
-    font-family: Josefin-semiBold;
+    font-family: $secondarySemiBoldFont;
     text-decoration: none;
     font-size: 2.5rem;
   }
@@ -55,7 +61,7 @@ $mobileBtnFontSize: 1.7rem;
     margin-right: 1rem;
     width: 1.5em;
     height: 1.5em;
-    background: url(../../../../assets/icons/pizza.png);
+    background: url(/assets/icons/pizza.png);
     background-size: cover;
     vertical-align: top;
     font-size: 1.7rem;
@@ -74,7 +80,7 @@ $mobileBtnFontSize: 1.7rem;
     display: flex;
     height: auto;
     list-style: none;
-    transition: height 2s ease;
+    transition: transform 2s ease;
 
     @include lg {
       display: none;

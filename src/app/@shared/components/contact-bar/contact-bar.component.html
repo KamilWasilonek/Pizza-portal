@@ -1,12 +1,14 @@
 <section class="contact-bar">
-  <ul class="contact-bar__items">
-    <app-contact-bar-item
-      class="contact-bar__item"
-      *ngFor="let item of contactItems"
-      [contactItem]="item"
-    >
-    </app-contact-bar-item>
-  </ul>
+  <div class='contact-bar__items-container'>
+    <ul class="contact-bar__items">
+      <app-contact-bar-item
+        class="contact-bar__item"
+        *ngFor="let item of contactItems"
+        [contactItem]="item"
+      >
+      </app-contact-bar-item>
+    </ul>
+  </div>
   <div class="contact-bar__socials-container">
     <ul class="contact-bar__socials">
       <li class="contact-bar__social-item">

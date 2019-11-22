@@ -5,12 +5,17 @@
   align-items: center;
   color: $white;
 
-  &__items {
+  &__items-container {
     flex-basis: 70%;
-    display: flex;
-    justify-content: center;
-    padding: 5rem 0;
     background: $black;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 4rem 0;
   }
 
   &__item:nth-child(even){

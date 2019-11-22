@@ -1,7 +1,9 @@
 @import 'variables.scss';
+@import 'mixins.scss';
 
 .service {
-  max-width: 25rem;
+  // max-width: 25rem;
+  max-width: 70rem;
 
   &:hover {
     .service__icon-bg {
@@ -28,37 +30,19 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1.5em;
-    height: 1.5em;
+    width: 1.3em;
+    height: 1.3em;
     background: url(/assets/icons/diet.svg);
     background-size: cover;
     font-size: 5rem;
   }
 
-  // &__icon-container {
-  //   position: relative;
-  //   width: 10rem;
-  //   height: 10rem;
-  //   margin: 0 auto 5rem auto;
-  //   border: 1px solid #bf7e06;
-  //   transition: transform 0.3s ease-in-out;
-  // }
-
-  // &__icon-container:before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   display: inline-block;
-  //   margin-left: 1rem;
-  //   width: 1.5em;
-  //   height: 1.5em;
-  //   background: url(../../../../../assets/icons/diet.png);
-  //   background-size: cover;
-  //   font-size: 5rem;
-  // }
-
   &__title {
-    margin: 0 0 4rem 0;
+    @include sectionTitle($fontSize: $sectionSubTitleFontSize);
+    margin: 0 0 2rem 0;
+  }
+
+  &__desc {
+    @include sectionDesc;
   }
 }

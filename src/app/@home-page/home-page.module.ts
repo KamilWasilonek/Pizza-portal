@@ -9,7 +9,11 @@ const routes: Routes = [{ path: '', component: HomePageComponent }];
 
 @NgModule({
   declarations: [HomePageComponent],
-  imports: [CommonModule, SharedModule, RouterModule.forChild(routes)],
+  imports: [
+    CommonModule,
+    SharedModule,
+    RouterModule.forChild(routes)
+  ],
   exports: [RouterModule]
 })
 export class HomePageModule {}

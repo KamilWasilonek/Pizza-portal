@@ -7,8 +7,8 @@
     </h4>
     <!-- <div class="services__list-container"> -->
       <ul class='services__list'>
-        <li *ngFor="let service of services">
-          <app-service-item
+        <li class="services__list-item" *ngFor="let service of services">
+          <app-service-item class='services__service'
             [service]="service"
           ></app-service-item>
         </li>

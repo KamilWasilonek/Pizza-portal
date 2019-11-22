@@ -8,10 +8,18 @@ $descFontSize: 1.6rem;
   display: flex;
   background: $darkGrey;
 
+  @include md {
+    display: block;
+  }
+
   &__img-container {
     @include bgImagePosition;
     flex-basis: 50%;
     background-image: url(../../../../assets/images/about.jpg);
+
+    @include md {
+      min-height: 30rem;
+    }
   }
 
   &__details {
