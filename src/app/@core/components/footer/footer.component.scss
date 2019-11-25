@@ -2,6 +2,7 @@
 @import 'mixins.scss';
 
 $titleFontSize: 1.6rem;
+$contactIconFontSize: 1.7rem;
 
 :host {
   display: block;
@@ -10,19 +11,28 @@ $titleFontSize: 1.6rem;
 
 .footer {
   @include bootstrapContainer;
+  display: flex;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 10rem 0;
   background: $darkGrey;
   color: $white;
 }
 
+.about__title,
+.blog__title,
+.services__title,
+.contact__title {
+  @include sectionTitle($color: $white, $fontSize: $titleFontSize);
+  margin-bottom: 4rem;
+}
+
 .about {
-  &__title {
-    @include sectionTitle($color: $white, $fontSize: $titleFontSize);
-  }
+  flex-basis: 20%;
 
   &__desc {
-    @include sectionDesc($color: $lightGrey)
+    @include sectionDesc($color: $lightGrey);
+    margin-bottom: 3rem;
   }
 
   &__social-list {
@@ -36,7 +46,7 @@ $titleFontSize: 1.6rem;
     justify-content: center;
     width: 5rem;
     height: 5rem;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 60%;
     font-size: 2.3rem;
     font-family: FontAwesome;
@@ -57,4 +67,75 @@ $titleFontSize: 1.6rem;
       margin: 0 1.5rem;
     }
   }
+}
+
+.blog {
+  flex-basis: 20%;
+}
+
+.services {
+  flex-basis: 15%;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    @include sectionDesc($color: $lightGrey);
+    padding-bottom: 2rem;
+  }
+}
+
+.contact {
+  flex-basis: 20%;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__address,
+  &__tel,
+  &__mail {
+    @include sectionDesc($color: $lightGrey);
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+
+  &__tel,
+  &__mail {
+    @include sectionDesc($color: $white);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__address-icon::before,
+  &__tel-icon::before,
+  &__mail-icon::before {
+    display: block;
+    margin-right: 2rem;
+    padding-top: 0.5rem;
+    font-size: $contactIconFontSize;
+    font-family: FontAwesome;
+  }
+
+  &__address-icon::before {
+    content: '\f041';
+  }
+
+  &__tel-icon::before {
+    content: '\f095';
+  }
+
+  &__mail-icon::before {
+    content: '\f0e0';
+  }
+
+
+}
+
+.copyrights {
+  @include sectionDesc($color: $lightGrey);
+  padding-bottom: 6rem;
+  color: $white;
+  text-align: center;
 }

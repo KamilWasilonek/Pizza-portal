@@ -1,0 +1,73 @@
+<section class="menu">
+  <div class="menu__image"></div>
+  <div class="menu__menu-container">
+    <ul class="menu__buttons-list" (click)="showItems($event)">
+      <li>
+        <button
+          type="button"
+          data-type="Pizza"
+          class="menu__type-btn"
+          [ngClass]="isSectionActive.Pizza ? 'menu__type-btn--active' : ''"
+        >
+          Pizza
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          data-type="Drinks"
+          class="menu__type-btn"
+          [ngClass]="isSectionActive.Drinks ? 'menu__type-btn--active' : ''"
+        >
+          Drinks
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          data-type="Burgers"
+          class="menu__type-btn"
+          [ngClass]="isSectionActive.Burgers ? 'menu__type-btn--active' : ''"
+        >
+          Burgers
+        </button>
+      </li>
+      <li>
+        <button
+          type="button"
+          data-type="Pasta"
+          class="menu__type-btn"
+          [ngClass]="isSectionActive.Pasta ? 'menu__type-btn--active' : ''"
+        >
+          Pasta
+        </button>
+      </li>
+    </ul>
+    <div class="menu__item-box">
+      <app-selected-menu-items
+        class="menu__item"
+        [ngClass]="isSectionActive.Pizza ? 'menu__item--active' : ''"
+        [items]="menuTypes.pizzas"
+      ></app-selected-menu-items>
+
+      <app-selected-menu-items
+        class="menu__item"
+        [ngClass]="isSectionActive.Drinks ? 'menu__item--active' : ''"
+        [items]="menuTypes.drinks"
+      ></app-selected-menu-items>
+
+      <app-selected-menu-items
+        class="menu__item"
+        [ngClass]="isSectionActive.Burgers ? 'menu__item--active' : ''"
+        [items]="menuTypes.burgers"
+      ></app-selected-menu-items>
+
+      <app-selected-menu-items
+        class="menu__item"
+        [ngClass]="isSectionActive.Pasta ? 'menu__item--active' : ''"
+        [items]="menuTypes.pasta"
+      ></app-selected-menu-items>
+
+    </div>
+  </div>
+</section>

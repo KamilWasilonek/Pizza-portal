@@ -8,6 +8,8 @@ import { ServicesComponent } from './components/services/services.component';
 import { ServiceItemComponent } from './components/services/service-item/service-item.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
+import { SelectedMenuComponent } from './components/selected-menu/selected-menu.component';
+import { SelectedMenuItemsComponent } from './components/selected-menu/selected-menu-items/selected-menu-items.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MenuItemComponent } from './components/menu/menu-item/menu-item.compone
     ServicesComponent,
     ServiceItemComponent,
     MenuComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    SelectedMenuComponent,
+    SelectedMenuItemsComponent
   ],
   imports: [CommonModule],
   exports: [
@@ -28,7 +32,8 @@ import { MenuItemComponent } from './components/menu/menu-item/menu-item.compone
     BannerComponent,
     ServicesComponent,
     MenuComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    SelectedMenuComponent
   ]
 })
 export class SharedModule {}

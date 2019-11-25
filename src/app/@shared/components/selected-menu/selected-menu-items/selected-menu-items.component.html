@@ -1,0 +1,7 @@
+<div class="item" *ngFor="let item of items">
+  <div [ngStyle]="{'background-image': 'url(' + item.imgSrc + ')'}" class="item__image"></div>
+  <h3 class="item__title">{{item.title}}</h3>
+  <p class="item__desc">{{item.desc}}</p>
+  <p class="item__price">{{item.price | currency}}</p>
+  <button class="item__btn">Add to card</button>
+</div>

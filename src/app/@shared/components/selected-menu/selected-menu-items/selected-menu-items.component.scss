@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'mixins';
+
+$titleFontSize: 2.2rem;
+$priceFontSize: 1.6rem;
+$buttonFontSize: 1.3rem;
+
+.item {
+  text-align: center;
+
+  &__image {
+    @include bgImagePosition;
+    margin: 0 auto;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 60%;
+  }
+
+  &__title {
+    @include sectionTitle($fontSize: $titleFontSize);
+    text-transform: capitalize;
+    margin: 2rem 0;
+  }
+
+  &__desc {
+    @include sectionDesc($color: $grey);
+  }
+
+  &__price {
+    margin: 2rem 0;
+    color: $orange;
+    font-size: 1.6rem;
+  }
+
+  &__btn {
+    padding: 0.8rem 1.2rem;
+    color: $white;
+    background: none;
+    border: 1px solid $white;
+    font-size: $buttonFontSize;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $orange;
+      background: $orange;
+      color: $black;
+    }
+  }
+}

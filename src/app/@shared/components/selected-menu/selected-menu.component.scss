@@ -1,0 +1,80 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+$buttonFontSize: 1.8rem;
+
+.menu {
+display: flex;
+
+@include md {
+  &::ng-deep {
+    .item {
+      margin-bottom: 8rem;
+    }
+  }
+}
+
+  &__image {
+    @include bgImagePosition;
+    flex-basis: 30%;
+    background-image: url(/assets/images/about.jpg);
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__menu-container {
+    flex-basis: 70%;
+    padding: 4rem;
+    background: $darkGrey;
+    color: $white;
+
+    @include lg {
+      flex-basis: 100%;
+    }
+  }
+
+  &__buttons-list {
+    list-style: none;
+    display: flex;
+  }
+
+  &__type-btn {
+    margin: 0 0.5rem;
+    padding: 1rem 2rem;
+    background: none;
+    color: $orange;
+    font-size: $buttonFontSize;
+    border: 1px solid $orange;
+    outline: none;
+    cursor: pointer;
+
+    &--active {
+      background: $orange;
+      color: $black;
+    }
+  }
+
+  &__type-btn:hover {
+    background: $orange;
+    color: $black;
+  }
+
+  &__item-box {
+    padding: 5rem 0;
+  }
+
+  &__item {
+    display: none;
+    justify-content: space-between;
+
+    &--active {
+      display: flex;
+
+      @include md {
+        display: block;
+      }
+    }
+  }
+}
