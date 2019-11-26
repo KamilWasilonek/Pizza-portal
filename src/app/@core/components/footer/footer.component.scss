@@ -50,6 +50,7 @@ $contactIconFontSize: 1.7rem;
     border-radius: 60%;
     font-size: 2.3rem;
     font-family: FontAwesome;
+    cursor: pointer;
 
     &--twitter::before {
       content: '\f099';

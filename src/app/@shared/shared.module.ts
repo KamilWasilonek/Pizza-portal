@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { LightboxModule } from 'ngx-lightbox';
+
 import { ContactBarComponent } from './components/contact-bar/contact-bar.component';
 import { ContactBarItemComponent } from './components/contact-bar/contact-bar-item/contact-bar-item.component';
 import { IntroComponent } from './components/intro/intro.component';
@@ -10,6 +13,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
 import { SelectedMenuComponent } from './components/selected-menu/selected-menu.component';
 import { SelectedMenuItemsComponent } from './components/selected-menu/selected-menu-items/selected-menu-items.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,10 @@ import { SelectedMenuItemsComponent } from './components/selected-menu/selected-
     MenuComponent,
     MenuItemComponent,
     SelectedMenuComponent,
-    SelectedMenuItemsComponent
+    SelectedMenuItemsComponent,
+    GalleryComponent
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, LightboxModule],
   exports: [
     ContactBarComponent,
     ContactBarItemComponent,
@@ -33,7 +38,8 @@ import { SelectedMenuItemsComponent } from './components/selected-menu/selected-
     ServicesComponent,
     MenuComponent,
     MenuItemComponent,
-    SelectedMenuComponent
+    SelectedMenuComponent,
+    GalleryComponent
   ]
 })
 export class SharedModule {}

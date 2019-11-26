@@ -1,0 +1,8 @@
+<div
+  class="gallery"
+  *ngFor="let image of images; let i = index"
+  [ngStyle]="{'background-image': 'url(' + image.src + ')'}"
+  (click)="open(i)"
+>
+  <div class="gallery__view-img"></div>
+</div>

@@ -43,7 +43,7 @@ export class SelectedMenuComponent implements OnInit {
         desc:
           'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
         price: '2.90',
-        imgSrc: '/assets/images/drink-1.jpg'
+        imgSrc: '/assets/images/drink-2.jpg'
       },
       {
         title: 'Drinks',
@@ -51,7 +51,7 @@ export class SelectedMenuComponent implements OnInit {
           'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
 
         price: '2.90',
-        imgSrc: '/assets/images/drink-1.jpg'
+        imgSrc: '/assets/images/drink-3.jpg'
       }
     ],
     burgers: [
@@ -67,14 +67,14 @@ export class SelectedMenuComponent implements OnInit {
         desc:
           'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
         price: '2.90',
-        imgSrc: '/assets/images/burger-1.jpg'
+        imgSrc: '/assets/images/burger-2.jpg'
       },
       {
         title: 'Burgers',
         desc:
           'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
         price: '2.90',
-        imgSrc: '/assets/images/burger-1.jpg'
+        imgSrc: '/assets/images/burger-3.jpg'
       }
     ],
     pasta: [
@@ -90,14 +90,14 @@ export class SelectedMenuComponent implements OnInit {
         desc:
           'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
         price: '2.90',
-        imgSrc: '/assets/images/pasta-1.jpg'
+        imgSrc: '/assets/images/pasta-2.jpg'
       },
       {
         title: 'Pasta',
         desc:
           'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia',
         price: '2.90',
-        imgSrc: '/assets/images/pasta-1.jpg'
+        imgSrc: '/assets/images/pasta-3.jpg'
       }
     ]
   };
@@ -108,6 +108,8 @@ export class SelectedMenuComponent implements OnInit {
     Burgers: false,
     Pasta: false
   };
+
+  
 
   activeButtonNum = 0;
 

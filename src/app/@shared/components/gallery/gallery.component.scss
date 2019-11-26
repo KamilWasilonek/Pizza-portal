@@ -1,0 +1,46 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+$searchIconFontSize: 1.8rem;
+
+:host {
+  display: flex;
+
+  @include md {
+    display: block;
+  }
+}
+
+.gallery {
+  @include bgImagePosition;
+  flex-basis: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30rem;
+  cursor: pointer;
+
+  &:hover .gallery__view-img {
+    transform: rotate(135deg);
+    opacity: 0.9;
+  }
+
+  &__view-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    opacity: 0;
+    background-color: $orange;
+    font-family: FontAwesome;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+  }
+
+  &__view-img::before {
+    content: $searchIconCode;
+    color: $white;
+    font-size: $searchIconFontSize;
+    transform: rotate(-135deg);
+  }
+}

@@ -4,15 +4,15 @@
 $buttonFontSize: 1.8rem;
 
 .menu {
-display: flex;
+  display: flex;
 
-@include md {
-  &::ng-deep {
-    .item {
-      margin-bottom: 8rem;
+  @include md {
+    &::ng-deep {
+      .item {
+        margin-bottom: 8rem;
+      }
     }
   }
-}
 
   &__image {
     @include bgImagePosition;
@@ -62,19 +62,28 @@ display: flex;
   }
 
   &__item-box {
+    position: relative;
+    min-height: 55rem;
     padding: 5rem 0;
   }
 
   &__item {
-    display: none;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    display: flex;
     justify-content: space-between;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s ease-in-out;
 
     &--active {
-      display: flex;
+      visibility: visible;
+      opacity: 1;
+    }
 
-      @include md {
-        display: block;
-      }
+    @include md {
+      display: block;
     }
   }
 }
