@@ -1,0 +1,36 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+$numberFontSize: 3rem;
+$descFontSize: 1.4rem;
+
+.achievements {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../../../../assets/images/bg_2.jpg);
+
+  // background: url(../../../../assets/images/bg_2.jpg) rgba(255,255,255,0.3);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  &__container {
+    @include bootstrapContainer;
+    display: flex;
+    justify-content: space-between;
+    // max-width: 80%;
+    margin: 0 auto;
+    padding: 10rem 0;
+    text-align: center;
+  }
+
+  &__number {
+    color: $orange;
+    font-size: $numberFontSize;
+  }
+
+  &__desc {
+    color: $lightGrey;
+    font-size: $descFontSize;
+    text-transform: capitalize;
+  }
+}

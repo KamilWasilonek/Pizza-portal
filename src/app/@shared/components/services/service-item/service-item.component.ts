@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ServiceItemComponent implements OnInit {
   @Input() service;
 
+  src = '/assets/icons/diet.svg';
+
   constructor() {}
 
   ngOnInit() {}

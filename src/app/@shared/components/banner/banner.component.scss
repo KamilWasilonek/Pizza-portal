@@ -1,6 +1,43 @@
+@import 'variables.scss';
 @import 'mixins.scss';
+
+:host {
+  display: block;
+}
 
 .banner {
   @include bgImagePosition;
   min-height: 40rem;
+  padding: 20rem 0 10rem;
+  display: grid;
+
+  &__container {
+    @include bootstrapContainer;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    margin: 0 auto;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s linear, transform 1s linear;
+
+    &--active {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  &__slide-img {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 60%;
+  }
+
+  &__slide-title {
+    @include sectionTitle($color: $white);
+  }
+
+  &__slide-desc {
+    @include sectionDesc($color: $white);
+  }
 }

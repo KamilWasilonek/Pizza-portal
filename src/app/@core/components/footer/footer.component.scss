@@ -13,6 +13,7 @@ $contactIconFontSize: 1.7rem;
   @include bootstrapContainer;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 10rem 0;
   background: $darkGrey;
@@ -130,8 +131,20 @@ $contactIconFontSize: 1.7rem;
   &__mail-icon::before {
     content: '\f0e0';
   }
+}
 
+.about,
+.blog,
+.services,
+.contact {
+  @include lg {
+    padding: 3rem 3rem 3rem 0;
+    flex-basis: 50%;
+  }
 
+  @include md {
+    flex-basis: 100%;
+  }
 }
 
 .copyrights {

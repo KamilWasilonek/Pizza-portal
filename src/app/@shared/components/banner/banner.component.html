@@ -1,1 +1,59 @@
-<div class="banner" [ngStyle]="{'background-image': 'url(' + imgSrc + ')'}"></div>
+<div
+  class="banner"
+  [ngStyle]="{ background: 'url(' + imgSrc + ') rgba(0,0,0,0.5)' }"
+>
+  <div
+    class="banner__container"
+    [ngClass]="counter === 1 ? 'banner__container--active' : ''"
+  >
+    <img
+      class="banner__slide-img"
+      src="../../../../assets/images/pizza-1.jpg"
+      alt=""
+    />
+    <div>
+      <h2 class="banner__slide-title">Italian pizza</h2>
+      <h4 class="banner__slide-desc">
+        Far far away, behind the word mountains, far from the countries Vokalia
+        and Consonantia, there live the blind texts.
+      </h4>
+    </div>
+  </div>
+
+  <div
+    class="banner__container"
+    [ngClass]="counter === 2 ? 'banner__container--active' : ''"
+  >
+    <img
+      class="banner__slide-img"
+      src="../../../../assets/images/bg_1.png"
+      alt=""
+    />
+    <div>
+      <h2 class="banner__slide-title">Italian Drink</h2>
+      <h4 class="banner__slide-desc">
+        Far far away, behind the word mountains, far from the countries Vokalia
+        and Consonantia, there live the blind texts.far from the countries
+        Vokalia.
+      </h4>
+    </div>
+  </div>
+
+  <div
+    class="banner__container"
+    [ngClass]="counter === 3 ? 'banner__container--active' : ''"
+  >
+    <img
+      class="banner__slide-img"
+      src="../../../../assets/images/bg_2.png"
+      alt=""
+    />
+    <div>
+      <h2 class="banner__slide-title">Italian Burger</h2>
+      <h4 class="banner__slide-desc">
+        Far far away, behind the word mountains, far from the countries, there
+        live the blind texts.
+      </h4>
+    </div>
+  </div>
+</div>

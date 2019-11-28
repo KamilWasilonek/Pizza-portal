@@ -1,0 +1,31 @@
+.icon {
+  position: relative;
+  margin-bottom: 5rem;
+
+  &:hover {
+    .icon__bg {
+      background: #f8b500;
+      border: none;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__bg {
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    border: 1px solid #bf7e06;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.3em;
+    height: 1.3em;
+    background-size: cover;
+    font-size: 5rem;
+  }
+}

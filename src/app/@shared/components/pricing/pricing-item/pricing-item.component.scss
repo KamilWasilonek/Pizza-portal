@@ -1,0 +1,41 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+$titleFontSize: 1.8rem;
+$priceFontSize: 1.6rem;
+$descFontSize: 1.4rem;
+
+.item {
+  display: flex;
+  
+  &__img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 60%;
+    margin-right: 2rem;
+  }
+
+  &__box {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    @include sectionTitle($color: $lightGrey, $fontSize: $titleFontSize);
+    flex-basis: 85%;
+    text-align: left;
+    border-bottom: 1px dashed $orange;
+  }
+
+  &__price {
+    flex: 15%;
+    color: $orange;
+    font-size: $priceFontSize;
+    text-align: right;
+  }
+
+  &__desc {
+    @include sectionDesc($color: $grey, $fontSize: $descFontSize);
+    margin-top: 1rem;
+  }
+}

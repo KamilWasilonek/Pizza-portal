@@ -1,8 +1,5 @@
 <div class="service">
-  <div class='service__icon-container'>
-    <div class="service__icon-bg"></div>
-    <div class="service__icon-img"></div>
-  </div>
+  <app-rotated-icon [iconSrc]='src' class="service__icon"></app-rotated-icon>
   <h4 class="service__title">{{ service.title }}</h4>
   <p class="service__desc">{{ service.desc }}</p>
 </div>

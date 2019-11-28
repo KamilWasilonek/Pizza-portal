@@ -1,0 +1,35 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+.pricing {
+  background-color: $darkGrey;
+  text-align: center;
+  padding: 5rem 0 20rem 0;
+
+  &__title {
+    @include sectionTitle($color: $white);
+  }
+
+  &__desc {
+    @include sectionDesc($color: $white);
+    margin: 0 auto;
+    max-width: 55rem;
+  }
+
+  &__container {
+    @include bootstrapContainer();
+    margin: 7rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 4rem;
+
+    @include lg {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    margin: 0 auto;
+  }
+}

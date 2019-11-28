@@ -71,3 +71,28 @@
   font-size: $fontSize;
   font-family: $fontFamily;
 }
+
+@mixin buttonBig(
+  $padding: 1.4rem 2.4rem,
+  $color: $black,
+  $bgColor: $orange,
+  $borderColor: $orange,
+  $colorActive: $orange,
+  $bgActive: transparent,
+  $borderColorActive: $orange,
+  $outline: none
+) {
+  padding: $padding;
+  color: $color;
+  background-color: $bgColor;
+  border-color: $borderColor;
+  outline: $outline;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: $colorActive;
+    background-color: $bgActive;
+    border-color: $borderColorActive;
+  }
+}

@@ -1,0 +1,20 @@
+<form class="contact-form">
+  <h3 class="contact-form__title">Contact us</h3>
+
+  <input class="contact-form__input" placeholder="First Name" type="text" />
+  <div class="contact-form__error">
+    <!-- <div *ngIf="firstName.errors.required">First name is required</div>
+    <div *ngIf="firstName.errors.minlength">
+      First name should be minimum
+      {{ firstName.errors.minlength.requiredLength }}
+    </div> -->
+  </div>
+  <input class="contact-form__input" placeholder="Last Name" type="text" />
+  <input class="contact-form__input" placeholder="Subject" type="text" />
+  <textarea
+    class="contact-form__input"
+    placeholder="Message"
+    type="text"
+  ></textarea>
+  <button class="contact-form__submit-btn">Send</button>
+</form>

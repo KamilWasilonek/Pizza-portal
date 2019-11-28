@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule }   from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,6 +18,7 @@ import { FooterComponent } from './@core/components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     FontAwesomeModule,
     BrowserAnimationsModule
   ],

@@ -1,0 +1,49 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+$buttonFontSize: 1.3rem;
+$placeholderFontSize: 1.4rem;
+
+.contact-form {
+  &__title {
+    @include sectionDesc(
+      $color: $white,
+      $fontSize: 4rem,
+      $fontFamily: $secondarySemiBoldFont
+    );
+  }
+
+  &__input {
+    display: block;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    width: 80%;
+    color: $white;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 1.3rem;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      font-size: $placeholderFontSize;
+      color: $white;
+    }
+
+    &:active,
+    &:focus {
+      border-bottom: 1px solid $orange;
+    }
+  }
+
+  &__error {
+    color: #dc3645;
+    // background: #dc3645;
+  }
+
+  &__submit-btn {
+    @include buttonBig();
+    font-size: $buttonFontSize;
+  }
+}

@@ -2,40 +2,7 @@
 @import 'mixins.scss';
 
 .service {
-  // max-width: 25rem;
   max-width: 70rem;
-
-  &:hover {
-    .service__icon-bg {
-      background: #f8b500;
-      border: none;
-      transform: rotate(135deg);
-    }
-  }
-
-  &__icon-container {
-    position: relative;
-  }
-
-  &__icon-bg {
-    width: 10rem;
-    height: 10rem;
-    margin: 0 auto 5rem auto;
-    border: 1px solid #bf7e06;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  &__icon-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1.3em;
-    height: 1.3em;
-    background: url(/assets/icons/diet.svg);
-    background-size: cover;
-    font-size: 5rem;
-  }
 
   &__title {
     @include sectionTitle($fontSize: $sectionSubTitleFontSize);
