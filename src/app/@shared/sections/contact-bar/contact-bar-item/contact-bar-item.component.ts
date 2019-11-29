@@ -11,7 +11,6 @@ export class ContactBarItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.contactItem);
   }
 
 }

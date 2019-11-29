@@ -12,12 +12,12 @@ export class BannerComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    setInterval(() => {
-      if(this.counter === 3) {
-        this.counter =  1;
-      }
-      this.counter++;
-      // console.log(this.counter);
-    },4000);
+    // setInterval(() => {
+    //   if(this.counter === 3) {
+    //     this.counter =  1;
+    //   }
+    //   this.counter++;
+    //   // console.log(this.counter);
+    // },4000);
   }
 }

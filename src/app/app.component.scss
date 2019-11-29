@@ -1,0 +1,15 @@
+// main {
+//   position: relative;
+// }
+
+// router-outlet ~ * {
+//   position: absolute;
+//   height: 100%;
+//   width: 100%;
+// }
+
+main {
+  ::ng-deep .homepage {
+    position: absolute;
+  }
+}
