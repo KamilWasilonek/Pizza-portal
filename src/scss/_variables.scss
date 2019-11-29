@@ -1,14 +1,10 @@
+// Colors
 $black: #000000;
 $white: #ffffff;
 $darkGrey: #201e21;
 $grey: #808080;
 $lightGrey: #bfbfbf;
 $orange: #fac564;
-
-$sectionTitleFontSize: calc(28px + (32 - 28) * ((100vw - 320px) / (1550 - 320))); //base font-size 52px
-$sectionSubTitleFontSize: 1.8rem;
-$sectionDescFontSize: 1.6rem;
-
 
 // Fonts
 $primaryLightFont: Poppins-light;
@@ -20,6 +16,12 @@ $secondaryRegularFont: Josefin-regular;
 $secondarySemiBoldFont: Josefin-semiBold;
 $secondaryBoldFont: Josefin-bold;
 
-// FontAwesome icons
+// Font sizes
+$sectionTitleFontSize: calc(28px + (32 - 28) * ((100vw - 320px) / (1550 - 320)));
+$sectionSubTitleFontSize: 1.8rem;
+$sectionDescFontSize: 1.6rem;
+$smallFontSize: 1.4rem;
 
+// FontAwesome icons
+$hamburgerIconCode: '\f0c9';
 $searchIconCode: '\f002';

@@ -1,12 +1,4 @@
-import {
-  Component,
-  OnInit,
-  HostListener,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-  HostBinding
-} from '@angular/core';
+import { Component, OnInit, AfterViewInit, HostBinding } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import {
   map,
@@ -34,11 +26,6 @@ enum VisibilityState {
   Hidden = 'hidden'
 }
 
-enum MobileState {
-  Open = 'open',
-  Closed = 'close'
-}
-
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -60,7 +47,6 @@ enum MobileState {
 export class NavBarComponent implements OnInit, AfterViewInit {
   isMobileMenuOpen = false;
   isMenuVisible = true;
-  scroll$;
 
   constructor() {}
 
@@ -71,7 +57,7 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.scroll$ = fromEvent(window, 'scroll').pipe(
+    const scroll$ = fromEvent(window, 'scroll').pipe(
       throttleTime(10),
       map(() => window.pageYOffset),
       pairwise(),
@@ -80,11 +66,11 @@ export class NavBarComponent implements OnInit, AfterViewInit {
       share()
     );
 
-    const scrollUp$ = this.scroll$.pipe(
+    const scrollUp$ = scroll$.pipe(
       filter(direction => direction === Direction.Up)
     );
 
-    const scrollDown = this.scroll$.pipe(
+    const scrollDown = scroll$.pipe(
       filter(direction => direction === Direction.Down)
     );
 

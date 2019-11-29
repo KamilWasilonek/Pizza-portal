@@ -31,6 +31,7 @@
 
 @mixin bootstrapContainer {
   max-width: 114rem;
+  margin: 0 auto;
 
   @include xl {
     max-width: 96rem;
@@ -42,6 +43,11 @@
 
   @include md {
     max-width: 54rem;
+  }
+
+  @include sm {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 

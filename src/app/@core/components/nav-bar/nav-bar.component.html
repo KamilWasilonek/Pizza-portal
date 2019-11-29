@@ -2,7 +2,7 @@
   <nav class="nav__container">
     <div class="nav__row">
       <div class="nav__logo">
-        <a class="nav__logo-link" href="#"
+        <a class="nav__logo-link" routerLink="/home"
           >Pizza<span class="nav__logo-span">Delicous</span>
         </a>
       </div>
@@ -11,23 +11,53 @@
       </button>
     </div>
     <ul class="nav__menu" [ngClass]="{ 'nav__menu--active': isMobileMenuOpen }">
-      <li class="nav__menu-item">
-        <a class="nav__menu-link" routerLink='/home'>Home</a>
+      <li class="nav__menu-item nav__menu-link--active">
+        <a
+          class="nav__menu-link"
+          routerLink="/home"
+          routerLinkActive="nav__menu-link--active"
+          >Home</a
+        >
       </li>
       <li class="nav__menu-item">
-        <a class="nav__menu-link" routerLink='/menu'>Menu</a>
+        <a
+          class="nav__menu-link"
+          routerLink="/menu"
+          routerLinkActive="nav__menu-link--active"
+          >Menu</a
+        >
       </li>
       <li class="nav__menu-item">
-        <a class="nav__menu-link" routerLink='/services'>Services</a>
+        <a
+          class="nav__menu-link"
+          routerLink="/services"
+          routerLinkActive="nav__menu-link--active"
+          >Services</a
+        >
       </li>
       <li class="nav__menu-item">
-        <a class="nav__menu-link" routerLink='/blog'>Blog</a>
+        <a
+          class="nav__menu-link"
+          routerLink="/blog"
+          routerLinkActive="nav__menu-link--active"
+          >Blog</a
+        >
       </li>
       <li class="nav__menu-item">
-        <a class="nav__menu-link" routerLink='/about'>About </a>
+        <a
+          class="nav__menu-link"
+          routerLink="/about"
+          routerLinkActive="nav__menu-link--active"
+          >About
+        </a>
       </li>
       <li class="nav__menu-item">
-        <a class="nav__menu-link" routerLink='/contact'>Contact</a>
+        <a
+          class="nav__menu-link"
+          routerLink="/contact"
+          routerLinkActive="nav__menu-link--active"
+          >Contact</a
+        >
       </li>
     </ul>
   </nav>

@@ -1,6 +1,12 @@
 @import 'variables.scss';
 @import 'mixins.scss';
-$navListFontSize: 1.4rem;
+
+$navListFontSize: $smallFontSize;
+
+$logoLinkFontSize: 2.5rem;
+$logoIconFontSize: 1.7rem;
+$logoSpanFontSize: 1.3rem;
+
 $mobileBtnFontSize: 1.7rem;
 
 :host {
@@ -15,44 +21,39 @@ $mobileBtnFontSize: 1.7rem;
   color: $white;
   font-size: $navListFontSize;
 
-  @include lg {
-    display: block;
-  }
-
   &__container {
     @include bootstrapContainer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    padding: 0.8rem 1.5rem;
-    max-width: 114rem;
+    width: 100%;
 
     @include lg {
       display: block;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
     }
   }
 
   &__row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include lg {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__logo {
+    line-height: 1.2;
     cursor: pointer;
-
-    @include lg {
-      padding: 1.5rem;
-    }
   }
 
   &__logo-link {
     color: $white;
     font-family: $secondarySemiBoldFont;
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: $logoLinkFontSize;
   }
 
   &__logo-link::before {
@@ -64,14 +65,13 @@ $mobileBtnFontSize: 1.7rem;
     background: url(/assets/icons/pizza.png);
     background-size: cover;
     vertical-align: top;
-    font-size: 1.7rem;
+    font-size: $logoIconFontSize;
   }
 
   &__logo-span {
     display: block;
-    margin-top: 0.3rem;
     color: $orange;
-    font-size: 1.3rem;
+    font-size: $logoSpanFontSize;
     text-transform: uppercase;
     letter-spacing: 0.4rem;
   }
@@ -81,6 +81,7 @@ $mobileBtnFontSize: 1.7rem;
     height: auto;
     list-style: none;
     transition: transform 2s ease;
+    margin-bottom: 0;
 
     @include lg {
       display: none;
@@ -93,21 +94,21 @@ $mobileBtnFontSize: 1.7rem;
   }
 
   &__menu-item {
-    padding: 2.5rem 2rem;
     cursor: pointer;
-
-    @include lg {
-      padding: 2rem 0;
-    }
   }
 
   &__menu-link {
+    display: block;
+    padding: 2.5rem;
     text-decoration: none;
     color: $white;
+
+    &--active {
+      color: $orange;
+    }
   }
 
   //  ----- Mobile
-
   &__mobile-btn {
     display: none;
     background: none;
@@ -127,7 +128,7 @@ $mobileBtnFontSize: 1.7rem;
   }
 
   &__mobile-btn::before {
-    content: '\f0c9';
+    content: $hamburgerIconCode;
     font-family: FontAwesome;
   }
 }
