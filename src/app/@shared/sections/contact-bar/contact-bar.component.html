@@ -1,12 +1,24 @@
 <section class="contact-bar">
-  <div class='contact-bar__items-container'>
+  <div class="contact-bar__items-container">
     <ul class="contact-bar__items">
-      <app-contact-bar-item
-        class="contact-bar__item"
-        *ngFor="let item of contactItems"
-        [contactItem]="item"
-      >
-      </app-contact-bar-item>
+      <li class="contact-bar__item contact-bar__item--phone">
+        <div>
+          <h4 class="contact-bar__item-title" >000 (123) 456 7890</h4>
+          <p class='contact-bar__item-desc'>A small river named Duden flows</p>
+        </div>
+      </li>
+      <li class="contact-bar__item contact-bar__item--location">
+        <div>
+          <h4 class="contact-bar__item-title">198 West 21th Street</h4>
+          <p class='contact-bar__item-desc'>Suite 721 New York NY 10016</p>
+        </div>
+      </li>
+      <li class="contact-bar__item contact-bar__item--open-hours">
+        <div>
+          <h4 class="contact-bar__item-title">Open Monday-Friday</h4>
+          <p class='contact-bar__item-desc'>8.00am - 9.00pm</p>
+        </div>
+      </li>
     </ul>
   </div>
   <div class="contact-bar__socials-container">

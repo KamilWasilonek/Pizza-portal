@@ -1,26 +1,96 @@
 @import 'variables.scss';
+@import 'mixins.scss';
+
+$detailsFontSize: $sectionDescFontSize;
+$iconsFontSize: 1.8rem;
+$socialsFontSize: 2.5rem;
 
 .contact-bar {
   display: flex;
-  align-items: center;
   color: $white;
+
+  @include lg {
+    display: block;
+  }
 
   &__items-container {
     flex-basis: 70%;
     background: $black;
+
+    @include xl {
+      padding: 0 3rem;
+    }
   }
 
   &__items {
     display: flex;
     justify-content: space-between;
-    max-width: 80%;
+    max-width: 80rem;
     margin: 0 auto;
     padding: 4rem 0;
+    list-style: none;
+
+    @include lg {
+      @include bootstrapContainer();
+    }
+
+    @include md {
+      display: block;
+      text-align: center;
+    }
   }
 
-  &__item:nth-child(even){
-    
+  &__item {
+    display: flex;
+    font-family: FontAwesome;
+
+    @include md {
+      display: block;
+    }
+
+    &:nth-child(even) {
+      padding: 0 5rem;
+
+      @include md {
+        padding: 2rem 0;
+      }
+    }
+
+    &::before {
+      margin-right: 2rem;
+      color: $orange;
+      font-size: $iconsFontSize;
+    }
+
+    &--phone::before {
+      content: $phoneIconCode;
+    }
+
+    &--location::before {
+      content: $locationArrowIconCode;
+    }
+
+    &--open-hours::before {
+      content: $clockIconCode;
+    }
   }
+
+  &__item-title {
+    font-size: $detailsFontSize;
+    font-family: $secondarySemiBoldFont;
+
+    @include md {
+      margin-top: 1rem;
+    }
+  }
+
+  &__item-desc {
+    color: $grey;
+    font-size: $smallFontSize;
+    font-family: $primaryRegularFont;
+  }
+
+  ///////////////////// Socials
 
   &__socials-container {
     flex-basis: 30%;
@@ -30,26 +100,34 @@
   &__socials {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100%;
     list-style: none;
+
+    @include xl {
+      margin: 0;
+      padding: 2rem 0;
+    }
   }
 
   &__twitter-icon,
   &__facebook-icon,
   &__instagram-icon {
     margin: 2rem;
-    font-size: 2.5rem;
+    font-size: $socialsFontSize;
     font-family: FontAwesome;
+    cursor: pointer;
   }
 
   &__twitter-icon::before {
-    content: '\f099';
+    content: $twitterIconCode;
   }
 
   &__facebook-icon::before {
-    content: '\f082';
+    content: $facebookIconCode;
   }
 
   &__instagram-icon::before {
-    content: '\f16d';
+    content: $instagramIconCode;
   }
 }

@@ -1,14 +1,10 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: "app-contact-bar",
-  templateUrl: "./contact-bar.component.html",
-  styleUrls: ["./contact-bar.component.scss"]
+  selector: 'app-contact-bar',
+  templateUrl: './contact-bar.component.html',
+  styleUrls: ['./contact-bar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ContactBarComponent implements OnInit {
-  @Input() contactItems;
-
-  constructor() {}
-
-  ngOnInit() {}
+export class ContactBarComponent {
 }
