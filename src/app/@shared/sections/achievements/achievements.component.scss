@@ -4,23 +4,40 @@
 $numberFontSize: 3rem;
 $descFontSize: 1.4rem;
 
+::ng-deep {
+  .icon:hover > .icon__img{
+    filter: grayscale(1) brightness(0);
+  }
+}
+
 .achievements {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(../../../../assets/images/bg_2.jpg);
+    url(/assets/images/bg_2.jpg);
 
-  // background: url(../../../../assets/images/bg_2.jpg) rgba(255,255,255,0.3);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
+  &__icon {
+    &:hover {
+      filter: grayscale(1) brightness(1);
+    }
+  }
 
   &__container {
     @include bootstrapContainer;
     display: flex;
     justify-content: space-between;
-    // max-width: 80%;
     margin: 0 auto;
     padding: 10rem 0;
     text-align: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    @include sm {
+      flex-basis: 50%;
+    }
   }
 
   &__number {

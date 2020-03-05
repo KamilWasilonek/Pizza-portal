@@ -2,7 +2,14 @@
 @import 'mixins.scss';
 
 .service {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   max-width: 70rem;
+  padding: 0px 4rem;
+  @include md {
+    padding: 0;
+  }
 
   &__title {
     @include sectionTitle($fontSize: $sectionSubTitleFontSize);

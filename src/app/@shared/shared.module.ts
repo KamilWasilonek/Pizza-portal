@@ -3,12 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { LightboxModule } from 'ngx-lightbox';
 
-import { OwlModule } from 'ngx-owl-carousel';
-
 import { ContactBarComponent } from './sections/contact-bar/contact-bar.component';
-import { ContactBarItemComponent } from './sections/contact-bar/contact-bar-item/contact-bar-item.component';
 import { IntroComponent } from './sections/intro/intro.component';
-import { BannerComponent } from './sections/banner/banner.component';
 import { ServicesComponent } from './sections/services/services.component';
 import { ServiceItemComponent } from './sections/services/service-item/service-item.component';
 import { MenuComponent } from './sections/menu/menu.component';
@@ -18,21 +14,20 @@ import { SelectedMenuItemsComponent } from './sections/selected-menu/selected-me
 import { GalleryComponent } from './sections/gallery/gallery.component';
 import { ContactComponent } from './sections/contact/contact.component';
 import { ContactFormComponent } from './elements/contact-form/contact-form.component';
-import { ButtonOrangeComponent } from './sections/elements/button-orange/button-orange.component';
-import { ButtonSmallComponent } from './sections/elements/button-small/button-small.component';
-import { ButtonBigComponent } from './sections/elements/button-big/button-big.component';
+import { ButtonOrangeComponent } from './elements/buttons/button-orange/button-orange.component';
+import { ButtonSmallComponent } from './elements/buttons/button-small/button-small.component';
+import { ButtonBigComponent } from './elements/buttons/button-big/button-big.component';
 import { FormsModule } from '@angular/forms';
 import { RotatedIconComponent } from './elements/rotated-icon/rotated-icon.component';
 import { AchievementsComponent } from './sections/achievements/achievements.component';
 import { PricingComponent } from './sections/pricing/pricing.component';
 import { PricingItemComponent } from './sections/pricing/pricing-item/pricing-item.component';
+import { SectionInfoComponent } from './sections/section-info/section-info.component';
 
 @NgModule({
   declarations: [
     ContactBarComponent,
-    ContactBarItemComponent,
     IntroComponent,
-    BannerComponent,
     ServicesComponent,
     ServiceItemComponent,
     MenuComponent,
@@ -48,14 +43,13 @@ import { PricingItemComponent } from './sections/pricing/pricing-item/pricing-it
     RotatedIconComponent,
     AchievementsComponent,
     PricingComponent,
-    PricingItemComponent
+    PricingItemComponent,
+    SectionInfoComponent,
   ],
-  imports: [CommonModule, LightboxModule, OwlModule, FormsModule],
+  imports: [CommonModule, LightboxModule, FormsModule],
   exports: [
     ContactBarComponent,
-    ContactBarItemComponent,
     IntroComponent,
-    BannerComponent,
     ServicesComponent,
     MenuComponent,
     MenuItemComponent,
@@ -65,7 +59,8 @@ import { PricingItemComponent } from './sections/pricing/pricing-item/pricing-it
     ContactFormComponent,
     RotatedIconComponent,
     AchievementsComponent,
-    PricingComponent
-  ]
+    PricingComponent,
+    SectionInfoComponent,
+  ],
 })
 export class SharedModule {}

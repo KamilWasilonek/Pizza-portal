@@ -24,6 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@types/googlemaps": "^3.38.1",
     "bootstrap": "^4.4.0",
+    "firebase-tools": "^7.14.0",
     "font-awesome": "^4.7.0",
     "ngx-lightbox": "^2.1.1",
     "ngx-owl-carousel": "^2.0.7",

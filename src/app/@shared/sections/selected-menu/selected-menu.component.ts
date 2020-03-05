@@ -109,7 +109,6 @@ export class SelectedMenuComponent implements OnInit {
     Pasta: false
   };
 
-  
 
   activeButtonNum = 0;
 

@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+  padding-top: 7rem;
+  background: url(/assets/images/bg_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: $sectionTitleFontSize;
+  font-family: $secondarySemiBoldFont;
+}

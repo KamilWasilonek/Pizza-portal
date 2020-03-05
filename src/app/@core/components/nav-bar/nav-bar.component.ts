@@ -1,12 +1,13 @@
 import { Component, OnInit, AfterViewInit, HostBinding } from '@angular/core';
-import { fromEvent } from 'rxjs';
+import { fromEvent, Subject } from 'rxjs';
 import {
   map,
   throttleTime,
   pairwise,
   distinctUntilChanged,
   share,
-  filter
+  filter,
+  takeUntil
 } from 'rxjs/operators';
 import {
   trigger,
@@ -48,12 +49,18 @@ export class NavBarComponent implements OnInit, AfterViewInit {
   isMobileMenuOpen = false;
   isMenuVisible = true;
 
+  destroy$: Subject<boolean> = new Subject<boolean>();
+
   constructor() {}
 
   ngOnInit() {}
 
   toggleMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMobileMenuOpen = false
   }
 
   ngAfterViewInit() {
@@ -66,16 +73,12 @@ export class NavBarComponent implements OnInit, AfterViewInit {
       share()
     );
 
-    const scrollUp$ = scroll$.pipe(
-      filter(direction => direction === Direction.Up)
-    );
+    const scrollUp$ = scroll$.pipe(filter(direction => direction === Direction.Up));
 
-    const scrollDown = scroll$.pipe(
-      filter(direction => direction === Direction.Down)
-    );
+    const scrollDown = scroll$.pipe(filter(direction => direction === Direction.Down));
 
-    scrollUp$.subscribe(() => (this.isMenuVisible = true));
-    scrollDown.subscribe(() => (this.isMenuVisible = false));
+    scrollUp$.pipe(takeUntil(this.destroy$)).subscribe(() => (this.isMenuVisible = true));
+    scrollDown.pipe(takeUntil(this.destroy$)).subscribe(() => (this.isMenuVisible = false));
   }
 
   @HostBinding('@toggle')
@@ -83,5 +86,10 @@ export class NavBarComponent implements OnInit, AfterViewInit {
     return this.isMenuVisible
       ? VisibilityState.Visible
       : VisibilityState.Hidden;
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe()
   }
 }

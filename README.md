@@ -1,5 +1,12 @@
-# Pizza
+# Recipe book
+The project was created for the purpose of practicing layout creation in Angular. Individual project sections were divided into appropriate reusable components.Routing was used to create a navigation system between individual views. Lazy loading was used to reduce the amount of initially loaded data.
 
+# Project live
+The project use firebase hoisting:
+
+
+
+# Development
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
 ## Development server

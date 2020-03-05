@@ -15,7 +15,7 @@ $descFontSize: 1.6rem;
   &__img-container {
     @include bgImagePosition;
     flex-basis: 50%;
-    background-image: url(../../../../assets/images/about.jpg);
+    background-image: url(/assets/images/about.jpg);
 
     @include md {
       min-height: 30rem;
@@ -25,13 +25,17 @@ $descFontSize: 1.6rem;
   &__details {
     flex-basis: 50%;
     padding: 8rem 5%;
+
+    @include md {
+      text-align: center;
+    }
   }
 
   &__title {
     margin-bottom: 2rem;
     color: $white;
     font-size: $titleFontSize;
-    font-family: Josefin-regular;
+    font-family: $secondarySemiBoldFont;
     line-height: 4rem;
   }
 
@@ -45,7 +49,7 @@ $descFontSize: 1.6rem;
     margin-left: 1rem;
     width: 1.5em;
     height: 1.5em;
-    background: url(../../../../assets/icons/pizza-rounded.png);
+    background: url(/assets/icons/pizza-rounded.png);
     background-size: cover;
     font-size: 1.8rem;
   }

@@ -11,9 +11,6 @@
     margin: 0 auto;
     padding: 10rem 0;
     
-    @include md {
-      padding: 10rem 2.5rem;
-    } 
   }
 
   &__title {

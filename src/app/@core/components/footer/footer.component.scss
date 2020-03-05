@@ -2,7 +2,7 @@
 @import 'mixins.scss';
 
 $titleFontSize: 1.6rem;
-$contactIconFontSize: 1.7rem;
+$contactIconFontSize: 2rem;
 
 :host {
   display: block;
@@ -13,11 +13,16 @@ $contactIconFontSize: 1.7rem;
   @include bootstrapContainer;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   margin: 0 auto;
   padding: 10rem 0;
   background: $darkGrey;
   color: $white;
+
+  @include md {
+    display: block;
+    max-width: 45rem;
+    text-align: center;
+  }
 }
 
 .about__title,
@@ -39,6 +44,9 @@ $contactIconFontSize: 1.7rem;
   &__social-list {
     display: flex;
     list-style: none;
+    @include md {
+      justify-content: center;
+    }
   }
 
   &__social-item {
@@ -71,10 +79,6 @@ $contactIconFontSize: 1.7rem;
   }
 }
 
-.blog {
-  flex-basis: 20%;
-}
-
 .services {
   flex-basis: 15%;
 
@@ -101,6 +105,10 @@ $contactIconFontSize: 1.7rem;
     @include sectionDesc($color: $lightGrey);
     display: flex;
     margin-bottom: 1.5rem;
+
+    @include md {
+      display: block;
+    }
   }
 
   &__tel,
@@ -115,9 +123,12 @@ $contactIconFontSize: 1.7rem;
   &__mail-icon::before {
     display: block;
     margin-right: 2rem;
-    padding-top: 0.5rem;
     font-size: $contactIconFontSize;
     font-family: FontAwesome;
+
+    @include md {
+      margin: 0 0 1rem 0;
+    }
   }
 
   &__address-icon::before {
@@ -139,7 +150,6 @@ $contactIconFontSize: 1.7rem;
 .contact {
   @include lg {
     padding: 3rem 3rem 3rem 0;
-    flex-basis: 50%;
   }
 
   @include md {
@@ -149,6 +159,7 @@ $contactIconFontSize: 1.7rem;
 
 .copyrights {
   @include sectionDesc($color: $lightGrey);
+  @include bootstrapContainer();
   padding-bottom: 6rem;
   color: $white;
   text-align: center;

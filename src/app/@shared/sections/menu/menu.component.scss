@@ -12,7 +12,14 @@
   }
 
   &__desc {
+    @include bootstrapContainer;
     @include sectionDesc($color: $grey);
+    max-width: 55rem;
+    margin: 0 auto;
+  }
+
+  &__container {
+    margin-top: 4rem;
   }
 
   &__list {

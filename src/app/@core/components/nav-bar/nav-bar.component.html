@@ -16,6 +16,7 @@
           class="nav__menu-link"
           routerLink="/home"
           routerLinkActive="nav__menu-link--active"
+          (click)="closeMenu()"
           >Home</a
         >
       </li>
@@ -24,6 +25,7 @@
           class="nav__menu-link"
           routerLink="/menu"
           routerLinkActive="nav__menu-link--active"
+          (click)="closeMenu()"
           >Menu</a
         >
       </li>
@@ -32,15 +34,8 @@
           class="nav__menu-link"
           routerLink="/services"
           routerLinkActive="nav__menu-link--active"
+          (click)="closeMenu()"
           >Services</a
-        >
-      </li>
-      <li class="nav__menu-item">
-        <a
-          class="nav__menu-link"
-          routerLink="/blog"
-          routerLinkActive="nav__menu-link--active"
-          >Blog</a
         >
       </li>
       <li class="nav__menu-item">
@@ -48,6 +43,7 @@
           class="nav__menu-link"
           routerLink="/about"
           routerLinkActive="nav__menu-link--active"
+          (click)="closeMenu()"
           >About
         </a>
       </li>
@@ -56,6 +52,7 @@
           class="nav__menu-link"
           routerLink="/contact"
           routerLinkActive="nav__menu-link--active"
+          (click)="closeMenu()"
           >Contact</a
         >
       </li>

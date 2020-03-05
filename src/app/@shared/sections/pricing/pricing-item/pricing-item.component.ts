@@ -1,17 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-pricing-item',
   templateUrl: './pricing-item.component.html',
-  styleUrls: ['./pricing-item.component.scss']
+  styleUrls: ['./pricing-item.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PricingItemComponent implements OnInit {
-
+export class PricingItemComponent {
   @Input() item;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }
